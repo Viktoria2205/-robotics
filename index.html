@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Сучасні технології</title>
+<style>
+:root{ --bg:#f7fafc; --card:#ffffff; --accent:#2563eb; --muted:#6b7280; }
+body{ font-family:Inter, system-ui, -apple-system,Segoe UI, Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#111827; }
+.container{ max-width:900px; margin:48px auto; padding:24px; }
+header{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
+h1{ margin:0; font-size:1.5rem; }
+nav a{ margin-left:12px; text-decoration:none; color:var(--muted); font-size:0.95rem }
+.card{ background:var(--card); border-radius:12px; padding:18px; box-shadow:0 6px 18px rgba(16,24,40,0.06); }
+.actions{ margin-top:16px; display:flex; gap:8px }
+button{ border:0; padding:10px 14px; border-radius:8px; cursor:pointer; font-weight:600 }
+.btn-primary{ background:var(--accent); color:#fff }
+.btn-ghost{ background:transparent; color:var(--muted) }
+footer{ margin-top:28px; text-align:center; color:var(--muted); font-size:0.9rem }
+pre{ background:#0f172a; color:#e6eef8; padding:12px; border-radius:8px; overflow:auto }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Сучасні технології</h1>
+<nav>
+<a href="#">Види сучасних технологій</a>
+<a href="#about">Робототехніка</a>
+<a href="#contact">Цікаві факти про робототехніку</a>
+</nav>
+</header>
+
+<main style="margin-top:18px">
+<section class="card">
+<h2 id="welcome">Приклади сучасних технологій:</h2>
+<p style="color:var(--muted)">Інформаційні технології: Методи та засоби для збору, зберігання, обробки та передачі інформації за допомогою комп'ютерів та мереж.
+Робототехніка: Розробка та створення роботів для автоматизації виробничих процесів.
+Біотехнології: Використання живих організмів або їх частин для створення нових продуктів та процесів. 
+Нанотехнології: Робота з речовинами на атомному та молекулярному рівні для створення нових матеріалів та пристроїв. 
+Освітні технології: Інтерактивні засоби та методики навчання, що підвищують зацікавленість студентів і покращують процес отримання знань.</p>
+<div class="actions">
+<button class="btn-primary" id="greetBtn">Перші роботи</button>
+<button class="btn-ghost" id="showCode">Походження слова "робот"</button>
+</div>
+<div id="output" style="margin-top:14px"></div>
+</section>
+
+<section class="card" style="margin-top:18px">
+<h3 id="about">Робототехніка</h3>
+<p style="color:var(--muted)">Робототехніка — це прикладна наука, що охоплює проєктування, створення, програмування та використання роботів, а також комп'ютерних систем для керування ними. Вона є міждисциплінарною галуззю, що об'єднує електроніку, механіку, інформатику, кібернетику та інші науки для створення автоматизованих технічних систем. Робототехніка використовується в різних сферах, від промисловості та медицини до побуту та космічних досліджень.</p>
+</section>
+
+<section class="card" style="margin-top:18px">
+<h3 id="contact">Цікаві факти про робототехніку</h3>
+<p style="color:var(--muted)">Японія є світовим лідером у виробництві роботів та інших передових технологій.Штучний інтелект у медицині допомагає швидше й точніше діагностувати захворювання та в розробці нових ліків. Також існують роботи, які можуть виконувати операції.Створено робота-пса для допомоги людям з обмеженими можливостями, а також робота-фермера для догляду за рослинами.Існують так звані кіборги-костюми, як-от японський екзоскелет HAL, що допомагає людям з пошкодженнями хребта рухатися. Також екзоскелети можуть значно збільшувати силу людини та дозволяти їй переносити великі вантажі.</p>
+<pre id="codePreview" style="display:none">&lt;!-- Сам термін "робототехніка" запровадив письменник-фантаст Айзек Азімов у 1942 році.--&gt;&#10;Слово "робот" було представлене читачам чеським письменником Карелом Чапеком у його п'єсі "R.U.R. (Россумські Універсальні Роботи)" у 1920 році.</pre>
+</section>
+</main>
+
+<footer>
+<small>Generated: <span id="now"></span></small>
+</footer>
+</div>
+
+<script>
+document.getElementById('now').textContent = new Date().toLocaleString();
+document.getElementById('greetBtn').addEventListener('click', function(){
+const out = document.getElementById('output');
+out.innerHTML = '<strong>Давні часи:</strong> Перші механізми, що нагадують роботів, з'явилися ще в античності.\n' +
+'Наприклад, "Механізм Антікітери", створений близько 350 року до н.е., міг обчислювати рух планет.';
+});
+
+document.getElementById('showCode').addEventListener('click', function(){
+const pre = document.getElementById('codePreview');
+pre.style.display = pre.style.display === 'none' ? 'block' : 'none';
+});
+</script>
+</body>
+</html>
