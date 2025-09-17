@@ -40,8 +40,6 @@ pre{ background:#0f172a; color:#e6eef8; padding:12px; border-radius:8px; overflo
 Нанотехнології: Робота з речовинами на атомному та молекулярному рівні для створення нових матеріалів та пристроїв. 
 Освітні технології: Інтерактивні засоби та методики навчання, що підвищують зацікавленість студентів і покращують процес отримання знань.</p>
 <div class="actions">
-<button class="btn-primary" id="greetBtn">Перші роботи</button>
-<button class="btn-ghost" id="showCode">Походження слова "робот"</button>
 </div>
 <div id="output" style="margin-top:14px"></div>
 </section>
@@ -54,8 +52,6 @@ pre{ background:#0f172a; color:#e6eef8; padding:12px; border-radius:8px; overflo
 <section class="card" style="margin-top:18px">
 <h3 id="contact">Цікаві факти про робототехніку</h3>
 <p style="color:var(--muted)">Японія є світовим лідером у виробництві роботів та інших передових технологій.Штучний інтелект у медицині допомагає швидше й точніше діагностувати захворювання та в розробці нових ліків. Також існують роботи, які можуть виконувати операції.Створено робота-пса для допомоги людям з обмеженими можливостями, а також робота-фермера для догляду за рослинами.Існують так звані кіборги-костюми, як-от японський екзоскелет HAL, що допомагає людям з пошкодженнями хребта рухатися. Також екзоскелети можуть значно збільшувати силу людини та дозволяти їй переносити великі вантажі.</p>
-<pre id="codePreview" style="display:none">&lt;!-- Сам термін "робототехніка" запровадив письменник-фантаст Айзек Азімов у 1942 році.--&gt;&#10;Слово "робот" було представлене читачам чеським письменником Карелом Чапеком у його п'єсі "R.U.R. (Россумські Універсальні Роботи)" у 1920 році.</pre>
-</section>
 </main>
 
 <footer>
@@ -67,9 +63,6 @@ pre{ background:#0f172a; color:#e6eef8; padding:12px; border-radius:8px; overflo
 document.getElementById('now').textContent = new Date().toLocaleString();
 document.getElementById('greetBtn').addEventListener('click', function(){
 const out = document.getElementById('output');
-out.innerHTML = '<strong>Давні часи:</strong> Перші механізми, що нагадують роботів, з'явилися ще в античності.\n' +
-'Наприклад,"Механізм Антікітери", створений близько 350 року до н.е., міг обчислювати рух планет.';
-});
 
 document.getElementById('showCode').addEventListener('click', function(){
 const pre = document.getElementById('codePreview');
@@ -78,4 +71,5 @@ pre.style.display = pre.style.display === 'none' ? 'block' : 'none';
 </script>
 </body>
 </html>
+
 
